@@ -178,6 +178,10 @@ picture {
   border-radius: 1rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .bottom-line {
   border-bottom: 2px solid var(--Light-pink);
 }
