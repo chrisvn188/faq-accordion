@@ -1,0 +1,244 @@
+@font-face {
+  font-family: WorkSans;
+  src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+  --purple: hsl(280, 79%, 53%);
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'],
+ul {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.4;
+  font-family: WorkSans, sans-serif;
+  margin: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.2;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* utility classes */
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.hide {
+  display: none;
+}
+
+.text-lg {
+  font-size: 2rem;
+}
+
+.text-regular {
+  font-size: 1rem;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.padding-16 {
+  padding: 1rem;
+}
+
+.padding-24 {
+  padding: 1.5rem;
+}
+
+.padding-bottom-24 {
+  padding-bottom: 1.5rem;
+}
+
+.padding-block-16 {
+  padding-block: 1rem;
+}
+
+.padding-block-24 {
+  padding-block: 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.content-between {
+  justify-content: space-between;
+}
+
+.center-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.gap-1ch {
+  gap: 1ch;
+}
+
+.gap-2ch {
+  gap: 2ch;
+}
+
+.gap-3ch {
+  gap: 3ch;
+}
+
+.gap-16 {
+  gap: 1rem;
+}
+
+.min-h-full {
+  min-height: 100dvh;
+}
+
+.round {
+  border-radius: 1rem;
+}
+
+.bottom-line {
+  border-bottom: 2px solid var(--Light-pink);
+}
+
+/* blocks */
+main {
+  background-color: var(--Light-pink);
+  position: relative;
+}
+
+.attribution a {
+  color: blue;
+}
+
+.background-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.background-image img {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+
+  @media (min-width: 38rem) {
+    height: 20rem;
+  }
+}
+
+.accordion {
+  background-color: var(--White);
+  position: relative;
+  max-width: 36rem;
+  padding-bottom: 0;
+  box-shadow: 1px 1px 50px hsla(292, 16%, 49%, 30%);
+
+  @media (min-width: 38rem) {
+    padding: 2rem 2rem 0 2rem;
+  }
+}
+
+.faqs > details > summary {
+  list-style: none;
+  user-select: none;
+  color: var(--Dark-purple);
+}
+
+.faqs > details:hover > summary {
+  color: var(--purple);
+}
+
+.faqs > details:not(:last-child) {
+  border-bottom: 2px solid var(--Light-pink);
+}
+
+.faqs > details {
+  cursor: pointer;
+}
+
+.faqs > details > p {
+  color: var(--Grayish-purple);
+}
